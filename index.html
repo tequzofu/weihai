@@ -1,5 +1,40 @@
 <html>
-<head></head>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script language="javascript">
+function viewtext(){
+    var textBox = document.getElementById("input");
+    var color = document.getElementById("color").value;
+    var size = document.getElementById("size").value;    
+    var result = textBox.value.fontcolor(color).fontsize(size);    
+    var check = document.getElementsByName("check");               
+
+    if (check[0].checked) {        
+        result = result.strike();       
+    }
+    if (check[1].checked) {
+        result = result.bold();       
+    }              
+    if (check[2].checked) {          
+        result = result.italics();       
+    }   
+     if (check[3].checked) {          
+        result = result.sup();       
+    }              
+    if (check[4].checked) {          
+        result = result.sub();       
+    }              
+    if (check[5].checked) {          
+        result = result.toLowerCase();       
+    }              
+    if (check[6].checked) {          
+        result = result.toUpperCase();       
+    }           
+    document.getElementById("disp").innerHTML = result;
+}
+</script>
+ </head>
 <body>
 공항버스는 승객이 저밖에 없더군요. 이 버스는 어제가 마지막 운행이라고 했습니다 (무기한 운행 안함)<br>
  <br>
